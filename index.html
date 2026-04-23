@@ -3,13 +3,29 @@
 <head>
     <title>Advanced Calculus Study Guide</title>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #000; }
-        iframe { border: none; width: 100vw; height: 100vh; }
+        body { margin: 0; font-family: sans-serif; background: #111; color: white; }
+        nav { background: #222; padding: 10px; text-align: center; }
+        nav a { color: #888; margin: 0 15px; text-decoration: none; font-size: 14px; cursor: pointer; }
+        nav a:hover { color: white; }
+        iframe { border: none; width: 100vw; height: calc(100vh - 40px); }
     </style>
 </head>
 <body>
 
-    <iframe src="https://play.famobi.com/moto-x3m-pool-party"></iframe>
+<nav>
+    <a onclick="loadGame('https://play.famobi.com/moto-x3m-pool-party')">Chapter 1: Limits</a>
+    <a onclick="loadGame('https://play.famobi.com/monkey-mart')">Chapter 2: Derivatives</a>
+    <a onclick="loadGame('https://html5.gamedistribution.com/69493903144a4962804f5e714151759b/')">Chapter 3: Integrals</a>
+    <a onclick="loadGame('https://play.famobi.com/western-sniper')">Chapter 4: Geometry</a>
+</nav>
+
+<iframe id="gameFrame" src="https://play.famobi.com/moto-x3m-pool-party"></iframe>
+
+<script>
+    function loadGame(url) {
+        document.getElementById('gameFrame').src = url;
+    }
+</script>
 
 </body>
 </html>
